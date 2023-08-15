@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <title>Todo List</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <!-- DATA TIME -->
+        <div class="wrapper__data data-time">
+          <div>
+            <div class="days"></div>
+            <span>-</span>
+            <div class="month"></div>
+            <span>-</span>
+            <div class="years"></div>
+          </div>
+          <div>
+            <div class="hours">2</div>
+            <span>:</span>
+            <div class="minutes">5</div>
+            <span>:</span>
+            <div class="seconds">2</div>
+          </div>
+        </div>
+
+      <!-- WRAPPER TITLE -->
+      <h1 class="wrapper__title">Todo List</h1>
+
+      <!-- TODOS FORM -->
+      <form class="wrapper__form form js-form">
+        <label class="form__label">
+          <input class="form__input js-input" type="text" placeholder="Type todo..." >
+          <span class="create-message"></span>
+        </label>
+        <button class="button form-btn js-btn" type="submit">Add</button>
+        <ul class="wrapper__todolist todolist ">
+
+        </ul>
+      </form>
+
+    </div>
+  </div>
+
+
+  <!-- TODOS EDIT MODAL -->
+  <div class="modal hidden">
+    <div class="modal__block">
+      <div class="modal__content">
+        <div class="modal__header">
+          <h3 class="modal__title">Change this Todo</h3>
+          <button class="modal__close js-close-modal button" type="button">
+            <img class="modal__close-icon" src="img/xmark-solid.svg" alt="close icon" width="30" height="30">
+          </button>
+        </div>
+        
+        <!-- EDIT FORM -->
+        <form class="modal__form js-modal-form">
+          <label class="modal__label">
+            <input class="modal__input js-modal-input" type="text" placeholder="Change modal title">
+            <span class="modal__create-message"></span>
+          </label>
+          <button class="modal__btn button js-btn" type="submit">Save Change</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="./js/app.js"></script>
+</body>
+</html>
